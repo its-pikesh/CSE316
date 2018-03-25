@@ -15,7 +15,7 @@ int main()
    //awt is average waiting time
    //atat is average turnaround time
    //at is arrival time
-   //tq is time qnatum
+   //tq is time qunatum
  
  
    cout<<"Enter the number of process : ";
