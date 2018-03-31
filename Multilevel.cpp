@@ -31,11 +31,11 @@ int main()
       { 
             printf("\nProcess ID:\t"); 
             scanf("%d", &process[count].pid); 
-            printf("Arrival Time:\t"); 
+            printf("Arrival Time: "); 
             scanf("%d", &process[count].at); 
-            printf("Burst Time:\t"); 
+            printf("Burst Time: "); 
             scanf("%d", &process[count].bt); 
-            printf("Process Priority:\t"); 
+            printf("Process Priority: "); 
             scanf("%d", &process[count].pp); 
             temp_process = process[count].pp; 
             process[count].q = Queue(temp_process);
@@ -70,15 +70,15 @@ int main()
             { 
                   for(j=count+1;j<limit;j++) 
                   {
-                        if(process[count].ready == 1 && process[j].ready == 1) 
+                        if(process[count].ready==1 && process[j].ready==1) 
                         { 
-                              if(process[count].q == 1 && process[j].q == 1) 
+                              if(process[count].q==1 && process[j].q==1) 
                               { 
                                     if(process[count].bt > process[j].bt) 
                                     { 
-                                          temp = process[count]; 
-                                          process[count] = process[j]; 
-                                          process[j] = temp; 
+                                          temp=process[count]; 
+                                          process[count]=process[j]; 
+                                          process[j]=temp; 
                                     } 
                                     else 
                                     { 
@@ -90,11 +90,11 @@ int main()
             } 
             printf("\nProcess[%d]:\tTime:\t%d To %d\n", process[y].pid, time, time + process[y].bt); 
             time = time + process[y].bt; 
-            for(count = y; count < limit; count++) 
+            for(count=y; count<limit; count++) 
             { 
-                  if(process[count].ready == 1) 
+                  if(process[count].ready==1) 
                   { 
-                        process[count].ready = 0; 
+                        process[count].ready=0; 
                   } 
             } 
       } 
