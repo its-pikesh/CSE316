@@ -1,7 +1,6 @@
-#include<iostream>
 #include<stdio.h>
 #include<conio.h>
-using namespace std;
+//using namespace std;
 int main()
  {
    int x,n,p[10],pp[10],bt[10],w[10],t[10],awt,atat,i,at[10],tq;
@@ -18,23 +17,26 @@ int main()
    //tq is time qunatum
  
  
-   cout<<"Enter the number of process : ";
-   cin>>n;
-   cout<<"Enter time quantum";
-   cin>>tq;
-   cout<<"\n\t Enter burst time : time priorities : Arrival time  \n";
+   printf("Enter the number of process : ");
+   scanf("%d",&n);
+   printf("Enter time quantum");
+   scanf("%d",&tq);
+   printf("\n\t Enter burst time : time priorities : Arrival time  \n");
  
    for(i=0;i<n;i++)
     {
-      cout<<"\nProcess["<<i+1<<"]:";
-      cin>>bt[i]>>pp[i]>>at[i];
-      p[i]=i+1;
+      //cout<<"\nProcess["<<i+1<<"]:";
+      printf("\n Process %d ",i+1);
+      //cin>>bt[i]>>pp[i]>>at[i];
+      scanf("%d %d %d",&bt[i],&pp[i],&at[i]);
+	  p[i]=i+1;
     }
  
 //sorting on the basis of priority
+int j;
   for(i=0;i<n-1;i++)
    {
-     for(int j=i+1;j<n;j++)
+     for(j=i+1;j<n;j++)
      {
        if(pp[i]<pp[j])
        {
@@ -67,20 +69,23 @@ for(i=1;i<n;i++)
  }
  
  //Gantt chrat
- cout<<"\n";
- cout<<"Gantt chart\n";
+ printf("\n");
+ printf("Gantt chart\n");
  for(i=0;i<n;i++)
  {
- 	cout<<"P"<<p[i]<<" ";
+ 	printf("P %d ",p[i]);
  }
 //Displaying the process
  
-cout<<"\n\nProcess \t Burst Time \t Wait Time \t Turn Around Time   Priority \tArrival time \n";
-for(i=0;i<n;i++)
-cout<<"\n   "<<p[i]<<"\t\t   "<<bt[i]<<"\t\t     "<<w[i]<<"\t\t     "<<t[i]<<"\t\t     "<<pp[i]<<"\t\t"     <<at[i]<<"\n";
+printf("\n\nProcess \t Burst Time \t Wait Time \t Turn Around Time   Priority \tArrival time \n");
+for(i=0;i<n;i++){
+//cout<<"\n   "<<p[i]<<"\t\t   "<<bt[i]<<"\t\t     "<<w[i]<<"\t\t     "<<t[i]<<"\t\t     "<<pp[i]<<"\t\t"     <<at[i]<<"\n";
+printf("\n  %d",p[i]); printf("\t\t %d",bt[i]); printf("\t\t %d",w[i]); printf("\t\t %d",t[i]); printf("\t\t %d",pp[i]); printf("\t\t %d",at[i]);
+
+}
 awt/=n;
 atat/=n;
-cout<<"\n Average Wait Time : "<<awt;
-cout<<"\n Average Turn Around Time : "<<atat;
+printf("\n Average Wait Time : %d ",awt);
+printf("\n Average Turn Around Time : %d",atat);
 getch();
 }
