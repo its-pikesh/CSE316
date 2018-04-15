@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<conio.h>
-//using namespace std;
 int main()
  {
    int x,n,p[10],pp[10],bt[10],w[10],t[10],awt,atat,i,at[10],tq;
@@ -79,7 +78,6 @@ for(i=1;i<n;i++)
  
 printf("\n\nProcess \t Burst Time \t Wait Time \t Turn Around Time   Priority \tArrival time \n");
 for(i=0;i<n;i++){
-//cout<<"\n   "<<p[i]<<"\t\t   "<<bt[i]<<"\t\t     "<<w[i]<<"\t\t     "<<t[i]<<"\t\t     "<<pp[i]<<"\t\t"     <<at[i]<<"\n";
 printf("\n  %d",p[i]); printf("\t\t %d",bt[i]); printf("\t\t %d",w[i]); printf("\t\t %d",t[i]); printf("\t\t %d",pp[i]); printf("\t\t %d",at[i]);
 
 }
